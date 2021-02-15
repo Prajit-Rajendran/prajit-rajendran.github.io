@@ -1,1 +1,2 @@
-# prajitrajendran.github.io
+# ML blog
+
