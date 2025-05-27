@@ -1,85 +1,176 @@
-/* General body styles */
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
-  line-height: 1.6;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4; /* Light gray background */
-  color: #333; /* Dark gray text */
+/* Root variables for consistent theming */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --light-bg: #f8f9fa;
+  --dark-text: #343a40;
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease-in-out;
+  --border-radius: 0.5rem;
 }
 
-/* Header styling */
+body {
+  font-family: 'Nunito', sans-serif; /* A more modern, rounded sans-serif */
+  line-height: 1.7;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to bottom right, var(--light-bg), #e9ecef); /* Subtle gradient background */
+  color: var(--dark-text);
+}
+
 header {
-  background-color: #007bff; /* Blue header */
-  color: #fff; /* White text */
-  padding: 1rem 0;
+  background: linear-gradient(to right, var(--primary-color), #1e88e5); /* Gradient header */
+  color: #fff;
+  padding: 2rem 0;
   text-align: center;
+  margin-bottom: 2rem;
+  box-shadow: var(--box-shadow);
 }
 
 header h1 {
   margin: 0;
-  font-size: 2rem;
+  font-size: 2.5rem;
+  letter-spacing: 0.05em;
 }
 
-/* Navigation bar styling */
 nav {
-  background-color: #333; /* Dark gray navigation */
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
 }
 
 nav ul {
-  padding: 0;
+  padding: 1rem 2rem;
   margin: 0;
   list-style: none;
-  display: flex; /* Use flexbox for horizontal navigation */
-  justify-content: center; /* Center the navigation items */
+  display: flex;
+  justify-content: space-around; /* Distribute items evenly */
 }
 
 nav li {
-  margin: 0 1rem;
+  margin: 0;
 }
 
 nav a {
-  color: #fff; /* White link color */
+  color: var(--secondary-color);
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   display: block;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
 }
 
 nav a:hover {
-  background-color: #555; /* Darker gray on hover */
+  background-color: var(--primary-color);
+  color: #fff;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 123, 255, 0.2);
 }
 
-/* Main content styling */
 main {
   padding: 2rem;
-  max-width: 800px; /* Limit content width for better readability */
-  margin: 0 auto; /* Center the content */
+  max-width: 960px; /* Slightly wider content area */
+  margin: 0 auto;
 }
 
-/* Section headings */
+section {
+  background-color: #fff;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow);
+}
+
 h2 {
-  color: #007bff; /* Blue heading color */
-  border-bottom: 2px solid #007bff; /* Blue underline */
-  padding-bottom: 0.5rem;
+  color: var(--primary-color);
+  border-bottom: 0.2rem solid var(--primary-color);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
 }
 
-/* Paragraphs */
-p {
-  margin-bottom: 1rem;
+.education-item,
+.experience-item,
+.project-item,
+.youtube-video {
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #eee;
+  border-radius: var(--border-radius);
+  background-color: var(--light-bg);
 }
 
-/* Footer styling */
+.project-item h3 {
+  margin-top: 0;
+  color: var(--dark-text);
+}
+
+.project-item p:last-child {
+  margin-bottom: 0;
+}
+
+.youtube-video iframe {
+  width: 100%; /* Make iframe responsive within its container */
+  aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+  border: 0;
+  border-radius: var(--border-radius);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.05);
+}
+
+#contact p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+#contact a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+#contact a:hover {
+  color: #1e88e5;
+}
+
 footer {
   text-align: center;
-  padding: 1rem 0;
-  background-color: #333; /* Dark gray footer */
-  color: #fff; /* White text */
+  padding: 1.5rem 0;
+  background-color: var(--dark-text);
+  color: #fff;
+  position: relative; /* To ensure it stays at the bottom */
+  width: 100%;
+  box-shadow: 0 -0.25rem 0.5rem rgba(0, 0, 0, 0.05);
 }
 
-/* Responsive design (adjust as needed) */
+/* Responsive adjustments */
 @media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
   nav ul {
-    flex-direction: column; /* Stack navigation items on smaller screens */
+    flex-direction: column;
     text-align: center;
+    padding: 1rem;
+  }
+
+  nav li {
+    margin: 0.5rem 0;
+  }
+
+  nav a {
+    padding: 0.75rem;
+  }
+
+  main {
+    padding: 1.5rem;
+  }
+
+  section {
+    padding: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
   }
 }
