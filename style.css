@@ -1,66 +1,85 @@
+/* General body styles */
 body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern sans-serif font */
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light gray background */
+  color: #333; /* Dark gray text */
 }
 
+/* Header styling */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 1em;
-    text-align: center;
+  background-color: #007bff; /* Blue header */
+  color: #fff; /* White text */
+  padding: 1rem 0;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+/* Navigation bar styling */
+nav {
+  background-color: #333; /* Dark gray navigation */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex; /* Use flexbox for horizontal navigation */
+  justify-content: center; /* Center the navigation items */
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1em;
+nav li {
+  margin: 0 1rem;
 }
 
 nav a {
-    color: #fff;
-    text-decoration: none;
+  color: #fff; /* White link color */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  display: block;
 }
 
-section {
-    padding: 20px;
-    margin: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+nav a:hover {
+  background-color: #555; /* Darker gray on hover */
 }
 
+/* Main content styling */
+main {
+  padding: 2rem;
+  max-width: 800px; /* Limit content width for better readability */
+  margin: 0 auto; /* Center the content */
+}
+
+/* Section headings */
 h2 {
-    color: #333;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 0.5em;
-    margin-bottom: 1em;
+  color: #007bff; /* Blue heading color */
+  border-bottom: 2px solid #007bff; /* Blue underline */
+  padding-bottom: 0.5rem;
 }
 
-.education-item, .experience-item, .project-item, .youtube-video {
-    margin-bottom: 1.5em;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+/* Paragraphs */
+p {
+  margin-bottom: 1rem;
 }
 
-.project-item a {
-    margin-right: 1em;
-}
-
+/* Footer styling */
 footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #333; /* Dark gray footer */
+  color: #fff; /* White text */
+}
+
+/* Responsive design (adjust as needed) */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column; /* Stack navigation items on smaller screens */
     text-align: center;
-    padding: 1em;
-    background-color: #333;
-    color: #fff;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  }
 }
