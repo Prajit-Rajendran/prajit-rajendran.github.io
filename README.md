@@ -1,37 +1,66 @@
-# Prajit Rajendran — personal website
+# Prajit T. Rajendran
 
-A responsive, dependency-free academic website, inspired by the clean AcademicPages layout of the supplied reference.
+Personal portfolio and academic website of **Prajit T. Rajendran**, Research Engineer at CEA LIST and PhD graduate in Computer Science from Université Paris-Saclay.
 
-## Preview
+**[Visit the portfolio](https://prajit-rajendran.github.io/)** · [Google Scholar](https://scholar.google.com/citations?user=R2wEeSEAAAAJ) · [LinkedIn](https://linkedin.com/in/prajitrajendran) · [Email](mailto:praj99T@gmail.com)
 
-From this folder run `python3 -m http.server 8000`, then visit http://localhost:8000. You can also open index.html directly.
+## Research
 
-## Edit
+My work focuses on trustworthy AI and AI safety, with interests in:
 
-- `index.html`: recruiter-facing introduction and research interests
-- `publications.html`: all 24 CV-listed research outputs, searchable and filterable
-- `experience.html`: research and industry experience
-- `service.html`: awards, recognition, peer review and teaching
-- `assets/style.css`: layout, colours and responsive styles
-- `assets/main.js`: theme toggle and publication filters
-- `assets/CV_Prajit_Rajendran.pdf`: downloadable original CV
+- LLM safety, hallucination detection, and factuality evaluation
+- Uncertainty estimation and unknown-unknown detection
+- Human-in-the-loop learning and stream-based active learning
+- Safety-aware learning and cooperative AI
+- Efficient video coding and quality assessment
 
-Replace the PR initials in each profile sidebar with a real photograph when available. Profile information is repeated in the four HTML files; update all four when changing contact details. No invented photograph or publication links were added. DOI and arXiv links come from the CV. The CV is copied unchanged and includes personal contact information; review it before public deployment.
+## Explore the website
 
-## Publish on GitHub Pages
+- **[About](https://prajit-rajendran.github.io/)** — background, research interests, and contact details
+- **[Publications](https://prajit-rajendran.github.io/publications.html)** — research outputs with search and publication-type filters
+- **[Projects](https://prajit-rajendran.github.io/projects.html)** — selected projects and interactive demos
+- **[Experience](https://prajit-rajendran.github.io/experience.html)** — research and industry experience
+- **[Education](https://prajit-rajendran.github.io/education.html)** — academic qualifications and doctoral research
+- **[Recognition & activities](https://prajit-rajendran.github.io/service.html)** — awards, peer review, and teaching
+- **[Curriculum vitae](assets/CV_Prajit_Rajendran.pdf)** — downloadable CV
 
-Put these files in the root of a GitHub repository. In repository Settings → Pages, select Deploy from a branch, choose the branch and / (root), and save. The .nojekyll file permits serving this static site directly. All internal links are relative, so project repositories also work. No build process is required.
+## Built with
 
-This website has been saved locally; it has not been published.
+The site uses HTML, CSS, and vanilla JavaScript, with responsive layouts, light and dark themes, and client-side publication filtering. It is configured for static hosting on GitHub Pages and requires no build step or package installation.
 
-## Add project code links
+## Run locally
 
-In `projects.html`, find each `<!-- Add this project` comment and replace it with a link, for example `<a href="https://github.com/your-account/your-project">Code ↗</a>`. The three project summaries are grounded in the supplied CV; no performance numbers or availability claims have been added.
+Clone the repository and start a local server from its root:
 
-## Deployed portfolio demos
+```sh
+git clone https://github.com/prajit-rajendran/prajit-rajendran.github.io.git
+cd prajit-rajendran.github.io
+python -m http.server 8000
+```
 
-The Projects page features FedSALAT Lab (https://fedsalat-lab.vercel.app/), The Judgment Lab (https://ai-debate-judgment-lab.vercel.app/), and Kinghunter (https://kinghunter-ogss.vercel.app/). Summaries describe the deployed experiments and distinguish research findings from visitor interactions. Add repository links at the existing HTML comments.
+Open [localhost:8000](http://localhost:8000) in your browser.
 
-- `projects.html`: dedicated portfolio page with three deployed demos and project summaries. The Projects tab appears in the navigation on all pages.
+## Repository structure
 
-- `education.html`: dedicated Education tab with doctoral, master’s and bachelor’s degrees, thesis title, and locations.
+```text
+├── index.html           # About and research interests
+├── publications.html    # Searchable publications
+├── projects.html        # Selected projects and demos
+├── experience.html      # Research and industry experience
+├── education.html       # Academic background
+├── service.html         # Recognition and academic activities
+├── assets/
+│   ├── style.css        # Site styles and responsive layouts
+│   ├── main.js          # Theme toggle and publication filters
+│   ├── photo.jpg        # Profile photograph
+│   └── CV_Prajit_Rajendran.pdf
+└── .nojekyll            # Serve the site as static files
+```
+
+## Updating the site
+
+Edit the relevant HTML page to update its content. The profile sidebar and navigation are shared manually across all six pages, so keep them consistent when changing profile details or links.
+
+Replace `assets/photo.jpg` to update the profile photograph, and replace `assets/CV_Prajit_Rajendran.pdf` to update the downloadable CV. Site styling lives in `assets/style.css`; theme switching and publication filters live in `assets/main.js`.
+
+To publish through GitHub Pages, select **Deploy from a branch** in the repository's **Settings → Pages**, then choose the publishing branch and **/ (root)** folder.
